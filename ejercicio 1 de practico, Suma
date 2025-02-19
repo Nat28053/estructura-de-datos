@@ -1,0 +1,26 @@
+// ejercicio 1 practico.cpp : Este archivo contiene la función "main". La ejecución del programa comienza y termina ahí.
+//
+
+#include <iostream>
+using namespace std;
+
+int sumarecursiva(int n);
+
+int main()
+{
+	//pedir el numero de elementos
+	int n;
+	cin >> n;
+	cout<< "Introduce la suma: ";
+	//llamada
+	cout << "la suma es: " << sumarecursiva(n);
+}
+//declaracion de funcion
+int sumarecursiva(int n) 
+{
+	if (n == 1)
+		return 1;
+	else
+		return sumarecursiva(n - 1)+ n;
+}
+
