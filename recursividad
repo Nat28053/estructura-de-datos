@@ -1,0 +1,20 @@
+// Ejemplo recursividad.cpp : Este archivo contiene la función "main". La ejecución del programa comienza y termina ahí.
+//
+
+#include <iostream>
+using namespace std;
+int factorial(int n); //prototipo
+int main()
+{
+    int fact, n;
+    cout << "ingrese dato del valor n";
+    cin >> n;
+    fact = factorial(n); //llamada de funcion = nombre de la funcion
+    cout << "el factorial de  "<<n<<" es:" << fact;
+}
+int factorial(int n) { // declaracion de la funcion 
+    if (n == 0)
+        return 1;
+    else
+        return factorial(n - 1)* n;
+}
