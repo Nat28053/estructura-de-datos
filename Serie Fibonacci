@@ -1,0 +1,21 @@
+//revisar
+
+#include <iostream>
+
+using namespace std;
+int SerieFib(int n); // prototipo de la serie Fibonacci
+int main()
+{
+    int numero, result;
+    cout << "ingrese el numero:";
+    cin >> numero;
+    result= SerieFib(numero);
+    cout << "el resultado es: " << numero;
+}
+int SerieFib(int n)
+{
+    if (n <= 1)
+        return n;//condicion base
+    else
+        return SerieFib(n - 1) + SerieFib(n - 2);//condicion recursiva
+}
